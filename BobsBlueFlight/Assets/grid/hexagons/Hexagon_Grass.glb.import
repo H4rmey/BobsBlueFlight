@@ -2,21 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-<<<<<<<< HEAD:BobsBlueFlight/Assets/Dice/10_Dice.fbx.import
-path="res://.import/10_Dice.fbx-c5edddf1defbdde875b10b15ff8231dd.scn"
+path="res://.import/Hexagon_Grass.glb-e4f5571e51fa3c6be3222bf55f2e736b.scn"
 
 [deps]
 
-source_file="res://Assets/Dice/10_Dice.fbx"
-dest_files=[ "res://.import/10_Dice.fbx-c5edddf1defbdde875b10b15ff8231dd.scn" ]
-========
-path="res://.import/10_Dice.fbx-fa71c72cbf7c1db59f882714c3291af0.scn"
-
-[deps]
-
-source_file="res://Assets/dice/objects/10_Dice.fbx"
-dest_files=[ "res://.import/10_Dice.fbx-fa71c72cbf7c1db59f882714c3291af0.scn" ]
->>>>>>>> more_dice:BobsBlueFlight/Assets/dice/objects/10_Dice.fbx.import
+source_file="res://Assets/grid/hexagons/Hexagon_Grass.glb"
+dest_files=[ "res://.import/Hexagon_Grass.glb-e4f5571e51fa3c6be3222bf55f2e736b.scn" ]
 
 [params]
 
