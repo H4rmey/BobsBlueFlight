@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "j5L+jPmd9vFJ5nlnUdnz2Nw3webIq0FRhwOVnrCyiW19G5V86doSgzj5IBxEbPS5YF5myYb0ceVwczODCWoIlw==",
+  "success": true,
+  "projectFilePath": "/home/harmey/Documents/BobsBlueFlight/Bobs Blue Flight.csproj",
+  "expectedPackageFiles": [
+    "/home/harmey/snap/gd-godot-engine-mono-snapcraft/21/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.2/microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
+    "/home/harmey/snap/gd-godot-engine-mono-snapcraft/21/.nuget/packages/microsoft.netframework.referenceassemblies.net472/1.0.2/microsoft.netframework.referenceassemblies.net472.1.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

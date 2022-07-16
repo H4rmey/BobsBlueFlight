@@ -1,0 +1,9 @@
+/home/harmey/Documents/BobsBlueFlight/.mono/temp/bin/Debug/Bobs Blue Flight.dll
+/home/harmey/Documents/BobsBlueFlight/.mono/temp/bin/Debug/Bobs Blue Flight.pdb
+/home/harmey/Documents/BobsBlueFlight/.mono/temp/obj/Debug/Bobs Blue Flight.csproj.AssemblyReference.cache
+/home/harmey/Documents/BobsBlueFlight/.mono/temp/obj/Debug/Bobs Blue Flight.GeneratedMSBuildEditorConfig.editorconfig
+/home/harmey/Documents/BobsBlueFlight/.mono/temp/obj/Debug/Bobs Blue Flight.AssemblyInfoInputs.cache
+/home/harmey/Documents/BobsBlueFlight/.mono/temp/obj/Debug/Bobs Blue Flight.AssemblyInfo.cs
+/home/harmey/Documents/BobsBlueFlight/.mono/temp/obj/Debug/Bobs Blue Flight.csproj.CoreCompileInputs.cache
+/home/harmey/Documents/BobsBlueFlight/.mono/temp/obj/Debug/Bobs Blue Flight.dll
+/home/harmey/Documents/BobsBlueFlight/.mono/temp/obj/Debug/Bobs Blue Flight.pdb

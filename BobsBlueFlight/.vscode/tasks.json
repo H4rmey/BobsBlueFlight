@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "/snap/gd-godot-engine-mono-snapcraft/21/godot-engine-mono/godot-engine-mono",
+            "type": "process",
+            "args": [
+                "--build-solutions",
+                "--path",
+                "${workspaceRoot}",
+                "--no-window",
+                "-q"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

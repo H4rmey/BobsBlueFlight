@@ -1,0 +1,138 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Dice.cs" type="Script" id=1]
+[ext_resource path="res://dice_face.cs" type="Script" id=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="BoxShape" id=3]
+
+[sub_resource type="BoxShape" id=4]
+
+[sub_resource type="CubeMesh" id=7]
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_color = Color( 1, 0.631373, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=10]
+albedo_color = Color( 0.101961, 1, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=11]
+albedo_color = Color( 0, 0.976471, 1, 1 )
+
+[sub_resource type="SpatialMaterial" id=12]
+albedo_color = Color( 0, 0.109804, 1, 1 )
+
+[sub_resource type="SpatialMaterial" id=13]
+albedo_color = Color( 0.992157, 0, 1, 1 )
+
+[sub_resource type="CubeMesh" id=5]
+
+[sub_resource type="BoxShape" id=6]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="dice" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1.00015, 0, 0, 0, 1.00037, 0, 4, 0 )
+collision_layer = 3
+collision_mask = 0
+script = ExtResource( 1 )
+dice_mapping = [ Vector3( 0, 0, 0 ), Vector3( -90, 0, 0 ), Vector3( 0, 0, 90 ), Vector3( 0, 0, -90 ), Vector3( 90, 0, 0 ), Vector3( 180, 0, 0 ) ]
+correction_threshold = 10.0
+
+[node name="CSGMesh" type="CSGMesh" parent="dice"]
+mesh = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="dice"]
+shape = SubResource( 3 )
+
+[node name="nr_1" type="Area" parent="dice"]
+transform = Transform( 0.5, 0, 0, 0, 0.05, -2.98023e-08, 0, 2.98023e-09, 0.5, 0, -1.05, 0 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="dice/nr_1"]
+shape = SubResource( 4 )
+
+[node name="CSGMesh" type="CSGMesh" parent="dice/nr_1"]
+mesh = SubResource( 7 )
+material = SubResource( 8 )
+
+[node name="nr_2" type="Area" parent="dice"]
+transform = Transform( -2.18524e-08, -0.0500076, 0, 0.499924, -2.1859e-09, 0, 0, 0, 0.5, -1.05, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="dice/nr_2"]
+shape = SubResource( 4 )
+
+[node name="CSGMesh" type="CSGMesh" parent="dice/nr_2"]
+mesh = SubResource( 7 )
+material = SubResource( 9 )
+
+[node name="nr_3" type="Area" parent="dice"]
+transform = Transform( -2.18524e-08, -0.0500076, 0, 0.499924, -2.1859e-09, 0, 0, 0, 0.5, 1.05, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="dice/nr_3"]
+shape = SubResource( 4 )
+
+[node name="CSGMesh" type="CSGMesh" parent="dice/nr_3"]
+mesh = SubResource( 7 )
+material = SubResource( 10 )
+
+[node name="nr_4" type="Area" parent="dice"]
+transform = Transform( 0.5, -2.22045e-16, -1.05879e-22, 0, 0.05, -2.98023e-08, 0, 2.98023e-09, 0.5, 0, 1.05, 0 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="dice/nr_4"]
+shape = SubResource( 4 )
+
+[node name="CSGMesh" type="CSGMesh" parent="dice/nr_4"]
+mesh = SubResource( 7 )
+material = SubResource( 11 )
+
+[node name="nr_5" type="Area" parent="dice"]
+transform = Transform( 0.5, 0, 0, 0, -2.1851e-09, 0.500108, 0, -0.0499893, -2.18604e-08, 0, 0, 1.05 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="dice/nr_5"]
+shape = SubResource( 4 )
+
+[node name="CSGMesh" type="CSGMesh" parent="dice/nr_5"]
+mesh = SubResource( 7 )
+material = SubResource( 12 )
+
+[node name="nr_6" type="Area" parent="dice"]
+transform = Transform( 0.5, 0, 0, 0, -2.1851e-09, 0.500108, 0, -0.0499894, -2.18604e-08, 0, 0, -1.05 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="dice/nr_6"]
+shape = SubResource( 4 )
+
+[node name="CSGMesh" type="CSGMesh" parent="dice/nr_6"]
+mesh = SubResource( 7 )
+material = SubResource( 13 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.951229, 0.134054, -0.277836, -1.49012e-08, 0.900645, 0.434555, 0.308486, -0.413362, 0.85672, -3.08965, 6.15963, 5.46165 )
+fov = 90.0
+
+[node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 2.00346, 0, 0, 0, 1, 0, 0, 0, 1.62174, 0, 0, 0 )
+
+[node name="CSGMesh" type="CSGMesh" parent="StaticBody"]
+transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0 )
+use_collision = true
+mesh = SubResource( 5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+shape = SubResource( 6 )
+
+[connection signal="body_entered" from="dice/nr_1" to="dice/nr_1" method="OnEnter"]
+[connection signal="body_entered" from="dice/nr_2" to="dice/nr_2" method="OnEnter"]
+[connection signal="body_entered" from="dice/nr_3" to="dice/nr_3" method="OnEnter"]
+[connection signal="body_entered" from="dice/nr_4" to="dice/nr_4" method="OnEnter"]
+[connection signal="body_entered" from="dice/nr_5" to="dice/nr_5" method="OnEnter"]
+[connection signal="body_entered" from="dice/nr_6" to="dice/nr_6" method="OnEnter"]
