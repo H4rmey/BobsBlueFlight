@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Hexagon_Grass.glb-e4f5571e51fa3c6be3222bf55f2e736b.scn"
+path="res://.import/tile_1.glb-35dd750146e7cf40b9759b7d8876fc03.scn"
 
 [deps]
 
-source_file="res://Assets/grid/hexagons/Hexagon_Grass.glb"
-dest_files=[ "res://.import/Hexagon_Grass.glb-e4f5571e51fa3c6be3222bf55f2e736b.scn" ]
+source_file="res://Assets/grid/hexagons/tile_1.glb"
+dest_files=[ "res://.import/tile_1.glb-35dd750146e7cf40b9759b7d8876fc03.scn" ]
 
 [params]
 

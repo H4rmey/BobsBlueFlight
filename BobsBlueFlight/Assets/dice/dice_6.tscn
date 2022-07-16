@@ -70,7 +70,7 @@ script = ExtResource( 1 )
 shape = SubResource( 4 )
 
 [node name="6_Dice" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1.361, 0, 0, 0, 1.361, 0, 0, 0, 1.361, 0.418123, 0, 0.118519 )
+transform = Transform( 1.345, 0, 0, 0, 1.345, 0, 0, 0, 1.345, 0.419834, 0, 0.125161 )
 
 [connection signal="body_entered" from="nr_1" to="nr_1" method="OnEnter"]
 [connection signal="body_entered" from="nr_5" to="nr_5" method="OnEnter"]

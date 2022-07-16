@@ -2,21 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-<<<<<<<< HEAD:BobsBlueFlight/Assets/Dice/Coin.fbx.import
-path="res://.import/Coin.fbx-81d0c9afd2e2fac3b663bd028266f170.scn"
-
-[deps]
-
-source_file="res://Assets/Dice/Coin.fbx"
-dest_files=[ "res://.import/Coin.fbx-81d0c9afd2e2fac3b663bd028266f170.scn" ]
-========
 path="res://.import/unit_hex.glb-3ba932d59cff8d831984aca6d9d60d13.scn"
 
 [deps]
 
 source_file="res://Assets/grid/unit_hex.glb"
 dest_files=[ "res://.import/unit_hex.glb-3ba932d59cff8d831984aca6d9d60d13.scn" ]
->>>>>>>> more_dice:BobsBlueFlight/Assets/grid/unit_hex.glb.import
 
 [params]
 

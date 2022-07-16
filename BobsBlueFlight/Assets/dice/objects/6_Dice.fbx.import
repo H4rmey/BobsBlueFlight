@@ -2,21 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-<<<<<<<< HEAD:BobsBlueFlight/Assets/Dice/6_Dice.fbx.import
-path="res://.import/6_Dice.fbx-997b844a779afe9ecab0b1b7d120caea.scn"
-
-[deps]
-
-source_file="res://Assets/Dice/6_Dice.fbx"
-dest_files=[ "res://.import/6_Dice.fbx-997b844a779afe9ecab0b1b7d120caea.scn" ]
-========
 path="res://.import/6_Dice.fbx-fff46ec5fbc8cf2f3fb6a340318eefae.scn"
 
 [deps]
 
 source_file="res://Assets/dice/objects/6_Dice.fbx"
 dest_files=[ "res://.import/6_Dice.fbx-fff46ec5fbc8cf2f3fb6a340318eefae.scn" ]
->>>>>>>> more_dice:BobsBlueFlight/Assets/dice/objects/6_Dice.fbx.import
 
 [params]
 
