@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Coin.fbx-08ef2ac4c9e8af9d1274fba4950fdc85.scn"
+path="res://.import/2_Dice.fbx-bd9e2634b438417d78567872b46eab0f.scn"
 
 [deps]
 
-source_file="res://Assets/Coin.fbx"
-dest_files=[ "res://.import/Coin.fbx-08ef2ac4c9e8af9d1274fba4950fdc85.scn" ]
+source_file="res://Assets/dice/objects/2_Dice.fbx"
+dest_files=[ "res://.import/2_Dice.fbx-bd9e2634b438417d78567872b46eab0f.scn" ]
 
 [params]
 
