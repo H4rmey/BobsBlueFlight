@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/12_Dice.fbx-4e59344268456808a3c5f0e1cf876bb2.scn"
+path="res://.import/tile_2.glb-1a64eec5b1ffcf077f385ca9eaecd83c.scn"
 
 [deps]
 
-source_file="res://Assets/dice/objects/12_Dice.fbx"
-dest_files=[ "res://.import/12_Dice.fbx-4e59344268456808a3c5f0e1cf876bb2.scn" ]
+source_file="res://Assets/grid/hexagons/tile_2.glb"
+dest_files=[ "res://.import/tile_2.glb-1a64eec5b1ffcf077f385ca9eaecd83c.scn" ]
 
 [params]
 
