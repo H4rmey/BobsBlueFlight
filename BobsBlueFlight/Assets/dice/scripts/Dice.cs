@@ -2,7 +2,6 @@ using Godot;
 using Godot.Collections;
 using System;
 using System.Collections.Generic;
-using System.Linq; // Import the C# collection query api
 
 public class Dice : RigidBody
 {
@@ -14,7 +13,7 @@ public class Dice : RigidBody
 	[Export]
 	public float force = 10;
 	[Export]
-	public float waittime = 2;
+	public float waittime = 1;
 
 	public bool allow_new_value = false;
 	public int last_rolled_value = 0;
@@ -25,10 +24,15 @@ public class Dice : RigidBody
 	private CustomSignals cs;
 	private Timer timer;
 	private Timer timer_stand_still;
+	private bool timer_is_running;
+
+    public TextureRect tile_preview;
+    public List<Texture> tile_preview_options = new List<Texture>();
 
 	public override void _Ready()
 	{
 		get_faces();
+        get_previews();
 
 		cs = GetNode<CustomSignals>("/root/CustomSignals");
 
@@ -37,7 +41,20 @@ public class Dice : RigidBody
 		AddChild(timer);
 		timer.Start();
 		timer.WaitTime = waittime;
+
+        PackedScene scene = ResourceLoader.Load("res://Assets/GUI.tscn") as PackedScene;
+        tile_preview = (TextureRect)scene.Instance();
+        AddChild(tile_preview);
 	}
+
+    public void get_previews()
+    {
+        for (int i = 1; i <= nof_faces; i++)
+        {
+            Texture scene = ResourceLoader.Load("res://Assets/GUI_elements/Prev/" + i.ToString() + ".png") as Texture;
+            tile_preview_options.Add(scene);
+        }
+    }
 
 	public void get_faces()
 	{
@@ -53,6 +70,7 @@ public class Dice : RigidBody
 	{
 		base._Process(delta);
 
+        current_lowest_value = 999;
 		for (int i = 0; i < nof_faces; i++)
 		{
 			dice_face face = dice_faces[i];
@@ -61,6 +79,20 @@ public class Dice : RigidBody
 			{
 				current_lowest_value = pos_y; 
 				current_roll_value = i+1;
+
+                if (current_roll_value >= nof_faces)
+                {
+                    current_roll_value = nof_faces-1;
+                }
+                if (current_roll_value < 0)
+                {
+                    current_roll_value = 0;
+                }
+
+				if (tile_preview_options[current_roll_value] != null)
+				{
+                	tile_preview.Texture = tile_preview_options[current_roll_value];
+				}
 			}
 
 			if (face.is_chosen && allow_new_value && is_velocity_zero())
@@ -80,13 +112,13 @@ public class Dice : RigidBody
 
 	public void _on_timer_timeout()
 	{
-		GD.Print("currentlowestValue = " + current_lowest_value);
 		GD.Print("last_rolled_value = " + last_rolled_value);
 		cs.EmitSignal(nameof(CustomSignals.LevelUp), last_rolled_value);
+        apply_force(1, 1);
 		timer.Stop();
 	}
 
-	public void apply_force() 
+	public void apply_force(float p_force_top, float p_force_bot) 
 	{
 		Random rand = new Random();
 
@@ -94,9 +126,9 @@ public class Dice : RigidBody
 		float   y = map((float)rand.NextDouble(), 0, 1, -1, 1);
 		float   z = map((float)rand.NextDouble(), 0, 1, -1, 1);
 		Vector3 force_position = new Vector3(x, y, z);
-				x = map((float)rand.NextDouble(), 0, 1, -force, force);
-				y = map((float)rand.NextDouble(), 0, 1, 5, force);
-				z = map((float)rand.NextDouble(), 0, 1, -force, force);
+				x = map((float)rand.NextDouble(), 0, 1, -p_force_top, p_force_top);
+				y = map((float)rand.NextDouble(), 0, 1, p_force_bot, p_force_top);
+				z = map((float)rand.NextDouble(), 0, 1, -p_force_top, p_force_top);
 		Vector3 force_impulse = new Vector3(x, y, z);
 		ApplyImpulse(force_position, force_impulse);
 	}
@@ -112,7 +144,7 @@ public class Dice : RigidBody
 		{
 			if (eventKey.Pressed && eventKey.Scancode == (int)KeyList.Space)
 			{
-				apply_force();
+				apply_force(force, 5);
 				allow_new_value = true;
 				timer.Stop();
 			}

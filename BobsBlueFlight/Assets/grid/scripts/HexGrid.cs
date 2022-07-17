@@ -181,6 +181,11 @@ public class HexGrid : Spatial
 
             allow_click = false;
 
+            int value = dice.last_rolled_value - 1;
+            if (value < 0)
+            {
+                value = 0;
+            }
             Spatial tile = (Spatial)placable_tiles[dice.last_rolled_value].Instance();
 
             Spatial spatial = tile.GetChild(0) as Spatial; 
@@ -188,7 +193,11 @@ public class HexGrid : Spatial
             spatial.Scale = Vector3.One * tile_scale;
             spatial.Translate(new Vector3(0, hight_offset, 0));
             spatial.Rotate(new Vector3(0,1,0), Mathf.Pi * rotation_offset/180);
-
+            
+            if (mouse_hover_tile == null)
+            {
+                return;
+            }
             mouse_hover_tile.AddChild(tile);
         }
     }

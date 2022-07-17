@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Beach.png-a4cb32f76878429d1e4dbf84ed1524a0.stex"
+path="res://.import/BG_Credits-01.png-2bb7e64c231fcaeb46c6508617e3d980.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GUI elements/Prev/Beach.png"
-dest_files=[ "res://.import/Beach.png-a4cb32f76878429d1e4dbf84ed1524a0.stex" ]
+source_file="res://UI scenes/UI ELEMENTS/BG_Credits-01.png"
+dest_files=[ "res://.import/BG_Credits-01.png-2bb7e64c231fcaeb46c6508617e3d980.stex" ]
 
 [params]
 
