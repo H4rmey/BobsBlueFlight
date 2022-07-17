@@ -14,7 +14,7 @@ public class Dice : RigidBody
 	[Export]
 	public float force = 10;
 	[Export]
-	public float waittime = 2;
+	public float waittime = 1;
 
 	public bool allow_new_value = false;
 	public int last_rolled_value = 0;
@@ -25,6 +25,9 @@ public class Dice : RigidBody
 	private CustomSignals cs;
 	private Timer timer;
 	private Timer timer_stand_still;
+
+    public TextureRect tile_preview;
+    public List<TextureRect> tile_preview_options;
 
 	public override void _Ready()
 	{
@@ -80,13 +83,13 @@ public class Dice : RigidBody
 
 	public void _on_timer_timeout()
 	{
-		GD.Print("currentlowestValue = " + current_lowest_value);
 		GD.Print("last_rolled_value = " + last_rolled_value);
 		cs.EmitSignal(nameof(CustomSignals.LevelUp), last_rolled_value);
+        apply_force(force, 1);
 		timer.Stop();
 	}
 
-	public void apply_force() 
+	public void apply_force(float p_force_top, float p_force_bot) 
 	{
 		Random rand = new Random();
 
@@ -94,9 +97,9 @@ public class Dice : RigidBody
 		float   y = map((float)rand.NextDouble(), 0, 1, -1, 1);
 		float   z = map((float)rand.NextDouble(), 0, 1, -1, 1);
 		Vector3 force_position = new Vector3(x, y, z);
-				x = map((float)rand.NextDouble(), 0, 1, -force, force);
-				y = map((float)rand.NextDouble(), 0, 1, 5, force);
-				z = map((float)rand.NextDouble(), 0, 1, -force, force);
+				x = map((float)rand.NextDouble(), 0, 1, -p_force_top, p_force_top);
+				y = map((float)rand.NextDouble(), 0, 1, p_force_bot, p_force_top);
+				z = map((float)rand.NextDouble(), 0, 1, -p_force_top, p_force_top);
 		Vector3 force_impulse = new Vector3(x, y, z);
 		ApplyImpulse(force_position, force_impulse);
 	}
@@ -112,7 +115,7 @@ public class Dice : RigidBody
 		{
 			if (eventKey.Pressed && eventKey.Scancode == (int)KeyList.Space)
 			{
-				apply_force();
+				apply_force(force, 5);
 				allow_new_value = true;
 				timer.Stop();
 			}

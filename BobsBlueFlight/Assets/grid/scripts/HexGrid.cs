@@ -181,6 +181,11 @@ public class HexGrid : Spatial
 
             allow_click = false;
 
+            int value = dice.last_rolled_value - 1;
+            if (value < 0)
+            {
+                value = 0;
+            }
             Spatial tile = (Spatial)placable_tiles[dice.last_rolled_value].Instance();
 
             Spatial spatial = tile.GetChild(0) as Spatial; 
