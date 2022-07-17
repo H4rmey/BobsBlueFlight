@@ -16,7 +16,7 @@ func _ready():
 
 #Druk op de start knop ga naar de //BOBGAME scene
 func _on_Start_pressed():
-	get_tree().change_scene("res://UI scenes/BOBGAME.tscn")
+	get_tree().change_scene("res://UI scenes/MainGame.tscn")
 	
 
 #Druk op de start knop ga naar de //Options Menu  scene
