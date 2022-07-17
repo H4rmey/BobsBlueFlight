@@ -61,13 +61,16 @@ public class HexGrid : Spatial
         if (dice.last_rolled_value == dice.nof_faces)
         {
             level++;
-            get_dice(level, false);
+            if (level > level_max)
+            {
+                level = level_max;
+            }
+            else
+            {
+                get_dice(level, false);
+            }
         }
 
-        if (level > level_max)
-        {
-            level = level_max;
-        }
     }
 
     public void set_dice_to_center()
