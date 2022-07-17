@@ -112,7 +112,6 @@ public class Dice : RigidBody
 	{
 		GD.Print("last_rolled_value = " + last_rolled_value);
 		cs.EmitSignal(nameof(CustomSignals.LevelUp), last_rolled_value);
-        apply_force(1, 1);
 		timer.Stop();
 	}
 
