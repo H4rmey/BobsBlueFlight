@@ -13,4 +13,4 @@ stream = ExtResource( 3 )
 attenuation_model = 3
 unit_size = 2.0
 autoplay = true
-max_distance = 2.0
+max_distance = 1.5

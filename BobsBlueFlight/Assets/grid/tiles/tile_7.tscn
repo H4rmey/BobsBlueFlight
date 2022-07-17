@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Audio/Ambience/beach_tile_ambience.wav" type="AudioStream" id=1]
+[ext_resource path="res://Assets/grid/hexagons/Hexagon_Beach.glb" type="PackedScene" id=2]
+
+[node name="tile_6" type="Spatial"]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.850655, 0.525724, 0, -0.525724, 0.850655, 0, 0, 0 )
+stream = ExtResource( 1 )
+attenuation_model = 3
+unit_size = 2.0
+autoplay = true
+max_distance = 1.5
+
+[node name="Hexagon_Beach" parent="." instance=ExtResource( 2 )]
