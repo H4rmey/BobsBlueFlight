@@ -1,17 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Assets/Audio/Music/final_main_loop.wav" type="AudioStream" id=2]
+[ext_resource path="res://Assets/Audio/Music/final_main_loop.wav" type="AudioStream" id=1]
 [ext_resource path="res://camera.gd" type="Script" id=3]
 [ext_resource path="res://Assets/grid/HexGrid.tscn" type="PackedScene" id=4]
-
-[sub_resource type="ImageTexture" id=1]
-
-[sub_resource type="PanoramaSky" id=2]
-panorama = SubResource( 1 )
-
-[sub_resource type="Environment" id=3]
-background_mode = 2
-background_sky = SubResource( 2 )
 
 [node name="MainGame" type="Spatial"]
 
@@ -22,7 +13,7 @@ script = ExtResource( 3 )
 sensitivity = 0.5
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Camera"]
-stream = ExtResource( 2 )
+stream = ExtResource( 1 )
 max_db = -8.0
 autoplay = true
 
@@ -31,7 +22,5 @@ tile_size = 1.05
 grid_size_x = 40
 grid_size_z = 35
 tile_scale = 0.035
+nof_different_tiles = 20
 level_max = 7
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 3 )

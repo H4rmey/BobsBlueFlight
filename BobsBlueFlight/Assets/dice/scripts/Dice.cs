@@ -100,6 +100,11 @@ public class Dice : RigidBody
 				last_rolled_value = i+1;
 				timer.Start();
 				face.is_chosen = false;
+
+				if (tile_preview_options[i] != null)
+				{
+                	tile_preview.Texture = tile_preview_options[last_rolled_value-1];
+				}
 				break;
 			}
 		}
