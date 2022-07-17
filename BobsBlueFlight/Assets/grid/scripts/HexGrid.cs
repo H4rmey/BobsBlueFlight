@@ -58,7 +58,7 @@ public class HexGrid : Spatial
 
     public void level_up(int x)
     {
-        if (dice.last_rolled_value + 1 == dice.nof_faces)
+        if (dice.last_rolled_value == dice.nof_faces)
         {
             level++;
             get_dice(level, false);
