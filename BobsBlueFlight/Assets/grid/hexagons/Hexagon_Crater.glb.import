@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/2_Dice.fbx-db8784d3a0b2bde915e9a534ce976892.scn"
+path="res://.import/Hexagon_Crater.glb-f77cdca75c9d8b62401369dda84eace3.scn"
 
 [deps]
 
-source_file="res://Assets/Dice/objects/2_Dice.fbx"
-dest_files=[ "res://.import/2_Dice.fbx-db8784d3a0b2bde915e9a534ce976892.scn" ]
+source_file="res://Assets/grid/hexagons/Hexagon_Crater.glb"
+dest_files=[ "res://.import/Hexagon_Crater.glb-f77cdca75c9d8b62401369dda84eace3.scn" ]
 
 [params]
 
