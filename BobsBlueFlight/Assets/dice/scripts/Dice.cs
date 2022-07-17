@@ -13,16 +13,30 @@ public class Dice : RigidBody
 
     [Export]
     public float force = 10;
+    [Export]
+    public float waittime = 2;
 
+    public bool allow_new_value = false;
     public int last_rolled_value = 0;
+    public int current_roll_value = 999;
+    public float current_lowest_value = 999;
+
 
     private CustomSignals cs;
+    private Timer timer;
+    private Timer timer_stand_still;
 
     public override void _Ready()
     {
         get_faces();
 
         cs = GetNode<CustomSignals>("/root/CustomSignals");
+
+        timer = new Timer();
+        timer.Connect("timeout", this, "_on_timer_timeout");
+        AddChild(timer);
+        timer.Start();
+        timer.WaitTime = waittime;
     }
 
     public void get_faces()
@@ -42,12 +56,34 @@ public class Dice : RigidBody
         for (int i = 0; i < nof_faces; i++)
         {
             dice_face face = dice_faces[i];
-            if (face.is_chosen)
+            float pos_y = face.GlobalTransform.origin.y;
+            if (pos_y < current_lowest_value)
             {
-                last_rolled_value = i;
-                cs.EmitSignal(nameof(CustomSignals.LevelUp), i);
+                current_lowest_value = pos_y; 
+                current_roll_value = i+1;
+            }
+
+            if (face.is_chosen && allow_new_value && is_velocity_zero())
+            {
+                last_rolled_value = i+1;
+                timer.Start();
+                face.is_chosen = false;
+                break;
             }
         }
+    }
+
+    public bool is_velocity_zero()
+    {
+        return LinearVelocity.x < 0.01f && LinearVelocity.y < 0.01f && LinearVelocity.z < 0.01f;
+    }
+
+    public void _on_timer_timeout()
+    {
+        GD.Print("currentlowestValue = " + current_lowest_value);
+        GD.Print("last_rolled_value = " + last_rolled_value);
+        cs.EmitSignal(nameof(CustomSignals.LevelUp), last_rolled_value);
+        timer.Stop();
     }
 
     public void apply_force() 
@@ -77,6 +113,8 @@ public class Dice : RigidBody
             if (eventKey.Pressed && eventKey.Scancode == (int)KeyList.Space)
             {
                 apply_force();
+                allow_new_value = true;
+                timer.Stop();
             }
         }
     }
