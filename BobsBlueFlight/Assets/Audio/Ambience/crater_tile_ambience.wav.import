@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/crater_tile_ambience.wav-3b49cdddf9fcdd4c49df70f928b06c11.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Ambience/crater_tile_ambience.wav"
+dest_files=[ "res://.import/crater_tile_ambience.wav-3b49cdddf9fcdd4c49df70f928b06c11.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

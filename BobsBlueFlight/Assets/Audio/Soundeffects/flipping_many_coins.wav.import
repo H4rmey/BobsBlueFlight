@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/flipping_many_coins.wav-2645e079581e6b7b5f1481b44ea61c99.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Soundeffects/flipping_many_coins.wav"
+dest_files=[ "res://.import/flipping_many_coins.wav-2645e079581e6b7b5f1481b44ea61c99.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

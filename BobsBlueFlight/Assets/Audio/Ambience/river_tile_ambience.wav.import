@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/river_tile_ambience.wav-af4c11f2fb3e75ebf9aa2974eba7b5bf.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Ambience/river_tile_ambience.wav"
+dest_files=[ "res://.import/river_tile_ambience.wav-af4c11f2fb3e75ebf9aa2974eba7b5bf.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
