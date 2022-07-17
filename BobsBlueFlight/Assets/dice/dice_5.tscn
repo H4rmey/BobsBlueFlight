@@ -2,9 +2,10 @@
 
 [ext_resource path="res://Assets/dice/scripts/dice_face.cs" type="Script" id=1]
 [ext_resource path="res://Assets/dice/scripts/Dice.cs" type="Script" id=2]
-[ext_resource path="res://Assets/dice/objects/6_Dice.fbx" type="PackedScene" id=3]
+[ext_resource path="res://Assets/dice/objects/10_Dice.fbx" type="PackedScene" id=3]
 
-[sub_resource type="BoxShape" id=3]
+[sub_resource type="ConvexPolygonShape" id=5]
+points = PoolVector3Array( 0.00787023, 0.00178651, -0.00255542, 0.00740601, 0.000853268, -0.00337438, 0.00771138, 0.00195711, -0.0028392, 0.00777153, 0.00213917, -0.0025292, 0.00781009, 0.0020933, -0.00126604, 0.00262343, -0.00714312, 0.00369557, 0.00649916, -0.00093868, -0.00474704, 0.00627861, -0.00138308, -0.00516809, 0.00632796, -0.000845498, -0.0051172, 0.0073875, 0.00130771, -0.00337438, -0.00213293, 0.00714229, -0.0040021, 0.00690786, 0.00238287, -0.00293174, 0.00696801, 0.00256064, -0.00262791, -0.00125076, 0.00688712, -0.0036011, 0.00771755, 0.00232266, -0.00164854, 0.00754327, 0.00290182, 0.00125872, 0.00754173, 0.00283588, 0.00252187, 0.00303367, -0.00631022, 0.0035984, 0.00247074, -0.00703274, 0.00399941, 0.00213144, -0.00714312, 0.00399941, 0.00207284, -0.00732088, 0.00369557, 0.00237667, -0.00732088, 0.00350741, 0.00265736, -0.00688938, 0.00272854, 0.00290412, -0.00671019, 0.0029167, 0.00598558, -0.00195507, -0.00563233, 0.00580205, -0.00178448, -0.00590069, 0.00714845, 0.000940715, -0.00369673, -0.00247378, 0.0070319, -0.0040021, -0.00262646, 0.00714802, -0.00369981, -0.00207741, 0.00732148, -0.00369827, 0.00461758, -0.00208983, -0.00642507, -0.00186149, 0.00630652, -0.00432753, 0.00741526, 0.0031828, 0.00255117, 0.0073875, 0.00295343, 0.00283496, 0.00288099, -0.00619984, 0.00390224, 0.00704049, 0.00224525, 0.00291516, 0.00682149, 0.00324874, 0.00330537, 0.00461913, 0.00440563, 0.0051145, 0.00364441, 0.0048572, 0.00589645, 0.0025093, 0.00441136, 0.00642083, 0.00220085, -0.00619984, 0.00432329, 0.00130941, -0.00671019, 0.00390224, 0.00125081, -0.00688938, 0.0035984, 0.00186, -0.00631022, 0.00432329, -0.00588836, 0.00200298, 0.00579928, 0.00159165, -0.00713739, 0.0029167, -0.00754939, -0.00289979, -0.00125988, -0.00741984, -0.0031822, -0.00255387, 0.00189548, -0.00713739, 0.00272854, 0.0010318, -0.0031822, -0.00777768, 0.00224557, -0.00289979, -0.00731345, 0.00502012, -0.00229769, -0.00613049, 0.0057311, -0.00214, -0.00582203, 0.00549976, -0.00250413, -0.00516038, 0.00574498, -0.00232636, -0.00497068, -0.00288556, 0.00619757, -0.00390494, -0.00303979, 0.00631082, -0.00360265, -0.00220234, 0.00619614, -0.00432753, -0.00251079, -0.00440502, -0.00642353, -0.00364744, -0.00485516, -0.00590069, -0.00462216, -0.00440502, -0.00511874, -0.00291487, 0.00673086, -0.00292866, -0.0026681, 0.00691005, -0.00274049, -0.00238278, 0.00732292, -0.00350857, -0.00781929, -0.00208839, 0.00124484, -0.00788561, -0.00178305, 0.00254809, -0.00742909, -0.000780988, 0.00334238, -0.00189851, 0.00713942, -0.0027297, -0.00159314, 0.00713655, -0.00291632, 0.00648682, 0.00366878, 0.00337168, 0.001112, -0.00283958, -0.00787947, 0.000504348, -0.00213713, -0.00756484, 0.00369222, 0.00510234, 0.00562346, 0.0033776, 0.00510234, 0.00581779, 0.00261726, 0.00477405, 0.00616635, 0.000118781, 0.00368024, 0.0073092, -0.000768025, 0.00295773, 0.00787678, -0.00744606, -0.00134151, 0.00328223, -0.00771904, -0.00194504, 0.00283033, -0.00691397, -0.00237367, 0.00292133, -0.00697104, -0.00256003, 0.00262212, -0.00639269, 0.000996624, 0.00502813, -0.00777765, -0.00213713, 0.00252033, -0.00773292, -0.00229626, 0.00174917, -0.000849765, 0.00203309, 0.00755752, -0.00184916, 0.00272693, 0.0075606, -0.00243985, 0.00258214, 0.00728453, -0.0046638, 0.00225242, 0.00634834, -0.00580971, 0.00234847, 0.00571291, -0.00605956, 0.00216641, 0.00552321, -0.00649139, -0.00366817, -0.00337284, -0.00369526, -0.0051003, -0.00562616, -0.0033868, -0.00510173, -0.00582357, -0.00754631, -0.00283958, -0.0025292, -0.00739208, -0.0029514, -0.00283766, -0.000114102, -0.00366531, -0.00731962, 0.000766534, -0.0029514, -0.00787947, -0.00714377, -0.00202388, -0.00262636, -0.00761108, -0.00265895, -0.00164854, 2.6077e-08, -0.00328542, -0.00754325, -0.0042659, -0.00480785, -0.00516655, -0.00637726, 0.00148117, 0.00500808, -0.00227791, 0.00296347, 0.0072799, -0.00103638, 0.0031957, 0.00778115, 0.00291492, 0.0052844, 0.00505897, -0.00111812, 0.00285452, 0.00787523 )
 
 [sub_resource type="BoxShape" id=4]
 
@@ -13,10 +14,12 @@ transform = Transform( 1, 0, 0, 0, 1.00015, 0, 0, 0, 1.00037, 0, 0, 0 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-shape = SubResource( 3 )
+transform = Transform( -110.696, -26.6983, 15.9098, -31.7636, 95.7333, -50.3961, 1.61562, 52.8758, 99.277, 0.0197017, 0.474975, 0.00908561 )
+visible = false
+shape = SubResource( 5 )
 
 [node name="nr_1" type="Area" parent="."]
-transform = Transform( 0.5, 0, 0, 0, 0.05, -2.98023e-08, 0, 2.98023e-09, 0.5, 0, -1.05, 0 )
+transform = Transform( 0.15018, 0, 0, 0, 0.0334242, -0.156465, 0, 0.0371783, 0.140665, 0.137301, 0.776678, 0.64789 )
 collision_layer = 2
 collision_mask = 2
 script = ExtResource( 1 )
@@ -24,17 +27,8 @@ script = ExtResource( 1 )
 [node name="CollisionShape" type="CollisionShape" parent="nr_1"]
 shape = SubResource( 4 )
 
-[node name="nr_5" type="Area" parent="."]
-transform = Transform( -2.18524e-08, -0.0500076, 0, 0.499924, -2.1859e-09, 0, 0, 0, 0.5, -1.05, 0, 0 )
-collision_layer = 2
-collision_mask = 2
-script = ExtResource( 1 )
-
-[node name="CollisionShape" type="CollisionShape" parent="nr_5"]
-shape = SubResource( 4 )
-
 [node name="nr_2" type="Area" parent="."]
-transform = Transform( -2.18524e-08, -0.0500076, 0, 0.499924, -2.1859e-09, 0, 0, 0, 0.5, 1.05, 0, 0 )
+transform = Transform( -0.0687448, 0.0376338, -0.0995649, -0.0039852, -0.0271794, -0.176539, -0.133412, -0.0185802, 0.0565774, 0.637053, 0.207007, -0.361332 )
 collision_layer = 2
 collision_mask = 2
 script = ExtResource( 1 )
@@ -42,26 +36,17 @@ script = ExtResource( 1 )
 [node name="CollisionShape" type="CollisionShape" parent="nr_2"]
 shape = SubResource( 4 )
 
-[node name="nr_6" type="Area" parent="."]
-transform = Transform( 0.5, -2.22045e-16, -1.05879e-22, 0, 0.05, -2.98023e-08, 0, 2.98023e-09, 0.5, 0, 1.05, 0 )
+[node name="nr_8" type="Area" parent="."]
+transform = Transform( -0.149663, -0.00258468, 0.0136843, -0.00179076, -0.0343052, -0.153073, 0.0122972, -0.036275, 0.143705, -0.0522475, 0.176177, -0.6217 )
 collision_layer = 2
 collision_mask = 2
 script = ExtResource( 1 )
 
-[node name="CollisionShape" type="CollisionShape" parent="nr_6"]
-shape = SubResource( 4 )
-
-[node name="nr_4" type="Area" parent="."]
-transform = Transform( 0.5, 0, 0, 0, -2.1851e-09, 0.500108, 0, -0.0499893, -2.18604e-08, 0, 0, 1.05 )
-collision_layer = 2
-collision_mask = 2
-script = ExtResource( 1 )
-
-[node name="CollisionShape" type="CollisionShape" parent="nr_4"]
+[node name="CollisionShape" type="CollisionShape" parent="nr_8"]
 shape = SubResource( 4 )
 
 [node name="nr_3" type="Area" parent="."]
-transform = Transform( 0.5, 0, 0, 0, -2.1851e-09, 0.500108, 0, -0.0499894, -2.18604e-08, 0, 0, -1.05 )
+transform = Transform( -0.104286, -0.0267628, -0.101258, 0, 0.0334242, -0.156465, 0.108027, -0.0258169, -0.0976791, -0.384614, 0.842572, -0.395077 )
 collision_layer = 2
 collision_mask = 2
 script = ExtResource( 1 )
@@ -69,12 +54,70 @@ script = ExtResource( 1 )
 [node name="CollisionShape" type="CollisionShape" parent="nr_3"]
 shape = SubResource( 4 )
 
-[node name="6_Dice" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1.345, 0, 0, 0, 1.345, 0, 0, 0, 1.345, 0.419834, 0, 0.125161 )
+[node name="nr_5" type="Area" parent="."]
+transform = Transform( -0.129348, 0.0188983, 0.0715021, 0, 0.0334243, -0.156465, -0.076282, -0.0320211, -0.121153, 0.339361, 0.776827, -0.58674 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="nr_5"]
+shape = SubResource( 4 )
+
+[node name="nr_9" type="Area" parent="."]
+transform = Transform( 0.00830475, 0.0371352, 0.140502, 0, 0.0334243, -0.156465, -0.149895, 0.00205593, 0.00777862, 0.660222, 0.776828, 0.109517 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="nr_9"]
+shape = SubResource( 4 )
+
+[node name="nr_7" type="Area" parent="."]
+transform = Transform( 0.0793876, -0.031571, -0.11945, 0, 0.0334243, -0.156465, 0.127435, 0.0196531, 0.0743581, -0.565, 0.75857, 0.321426 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="nr_7"]
+shape = SubResource( 4 )
+
+[node name="nr_4" type="Area" parent="."]
+transform = Transform( 0.136564, -0.0180764, 0.0432317, -0.00841417, -0.0298073, -0.168541, 0.0618897, 0.0358368, -0.118313, -0.276383, 0.207008, 0.627958 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="nr_4"]
+shape = SubResource( 4 )
+
+[node name="nr_10" type="Area" parent="."]
+transform = Transform( -0.0121419, -0.039849, 0.126004, -0.00841418, -0.0298073, -0.168541, 0.149395, -0.0049018, 0.000708892, -0.711987, 0.207008, -0.10025 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="nr_10"]
+shape = SubResource( 4 )
+
+[node name="nr_6" type="Area" parent="."]
+transform = Transform( 0.103234, 0.02795, -0.0976634, -0.00841418, -0.0298073, -0.168541, -0.108705, 0.0288127, -0.0795902, 0.524272, 0.203795, 0.473205 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="nr_6"]
+shape = SubResource( 4 )
+
+[node name="10_Dice" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.42978, 0, 0 )
 
 [connection signal="body_entered" from="nr_1" to="nr_1" method="OnEnter"]
-[connection signal="body_entered" from="nr_5" to="nr_5" method="OnEnter"]
 [connection signal="body_entered" from="nr_2" to="nr_2" method="OnEnter"]
-[connection signal="body_entered" from="nr_6" to="nr_6" method="OnEnter"]
-[connection signal="body_entered" from="nr_4" to="nr_4" method="OnEnter"]
+[connection signal="body_entered" from="nr_8" to="nr_8" method="OnEnter"]
 [connection signal="body_entered" from="nr_3" to="nr_3" method="OnEnter"]
+[connection signal="body_entered" from="nr_5" to="nr_5" method="OnEnter"]
+[connection signal="body_entered" from="nr_9" to="nr_9" method="OnEnter"]
+[connection signal="body_entered" from="nr_7" to="nr_7" method="OnEnter"]
+[connection signal="body_entered" from="nr_4" to="nr_4" method="OnEnter"]
+[connection signal="body_entered" from="nr_10" to="nr_10" method="OnEnter"]
+[connection signal="body_entered" from="nr_6" to="nr_6" method="OnEnter"]
