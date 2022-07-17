@@ -22,7 +22,7 @@ margin_left = -19.0
 margin_top = -21.0
 margin_right = 7981.0
 margin_bottom = 4479.0
-rect_scale = Vector2( 0.128, 0.133 )
+rect_scale = Vector2( 0.13, 0.135 )
 texture = ExtResource( 2 )
 
 [node name="Container" type="Container" parent="."]
