@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/2_Dice.fbx-db8784d3a0b2bde915e9a534ce976892.scn"
+path="res://.import/Hexagon_Beach.glb-482d4ec3c82248a0adca6d51ff3e2625.scn"
 
 [deps]
 
-source_file="res://Assets/Dice/objects/2_Dice.fbx"
-dest_files=[ "res://.import/2_Dice.fbx-db8784d3a0b2bde915e9a534ce976892.scn" ]
+source_file="res://Assets/grid/hexagons/Hexagon_Beach.glb"
+dest_files=[ "res://.import/Hexagon_Beach.glb-482d4ec3c82248a0adca6d51ff3e2625.scn" ]
 
 [params]
 
