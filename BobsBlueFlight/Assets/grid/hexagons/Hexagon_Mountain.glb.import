@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Hexagon_Mountain.glb-5b5687712964d3140bb593c87fa58579.scn"
+path="res://.import/Hexagon_Mountain.glb-51dc951cde19f8dac5f773e4035ceb29.scn"
 
 [deps]
 
-source_file="res://Assets/Hexagon/Hexagon_Mountain.glb"
-dest_files=[ "res://.import/Hexagon_Mountain.glb-5b5687712964d3140bb593c87fa58579.scn" ]
+source_file="res://Assets/grid/hexagons/Hexagon_Mountain.glb"
+dest_files=[ "res://.import/Hexagon_Mountain.glb-51dc951cde19f8dac5f773e4035ceb29.scn" ]
 
 [params]
 

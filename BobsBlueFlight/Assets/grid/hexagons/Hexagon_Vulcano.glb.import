@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Hexagon_Vulcano.glb-80ab5bd81b9025e3916099f1607c91cd.scn"
+path="res://.import/Hexagon_Vulcano.glb-ae77f7c82fceb6efe29fae7e80c511da.scn"
 
 [deps]
 
-source_file="res://Assets/Hexagon/Hexagon_Vulcano.glb"
-dest_files=[ "res://.import/Hexagon_Vulcano.glb-80ab5bd81b9025e3916099f1607c91cd.scn" ]
+source_file="res://Assets/grid/hexagons/Hexagon_Vulcano.glb"
+dest_files=[ "res://.import/Hexagon_Vulcano.glb-ae77f7c82fceb6efe29fae7e80c511da.scn" ]
 
 [params]
 

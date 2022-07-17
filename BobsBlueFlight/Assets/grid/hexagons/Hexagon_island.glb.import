@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Hexagon_island.glb-fb23451d3af2dcee2876866ae929ce81.scn"
+path="res://.import/Hexagon_island.glb-23c9592cce7a41b435022b0bea70d0f7.scn"
 
 [deps]
 
-source_file="res://Assets/Hexagon/Hexagon_island.glb"
-dest_files=[ "res://.import/Hexagon_island.glb-fb23451d3af2dcee2876866ae929ce81.scn" ]
+source_file="res://Assets/grid/hexagons/Hexagon_island.glb"
+dest_files=[ "res://.import/Hexagon_island.glb-23c9592cce7a41b435022b0bea70d0f7.scn" ]
 
 [params]
 
