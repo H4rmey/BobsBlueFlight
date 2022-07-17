@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/20_Dice.fbx-a53363318fb49e53e7f0899c72ae535b.scn"
+path="res://.import/20_Dice.fbx-c3092ec5d701af850132b5056e70ba90.scn"
 
 [deps]
 
-source_file="res://Assets/dice/objects/20_Dice.fbx"
-dest_files=[ "res://.import/20_Dice.fbx-a53363318fb49e53e7f0899c72ae535b.scn" ]
+source_file="res://Assets/Dice/objects/20_Dice.fbx"
+dest_files=[ "res://.import/20_Dice.fbx-c3092ec5d701af850132b5056e70ba90.scn" ]
 
 [params]
 
