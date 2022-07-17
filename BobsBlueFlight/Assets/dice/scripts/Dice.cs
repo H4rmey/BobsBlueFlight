@@ -45,8 +45,6 @@ public class Dice : RigidBody
         PackedScene scene = ResourceLoader.Load("res://Assets/GUI.tscn") as PackedScene;
         tile_preview = (TextureRect)scene.Instance();
         AddChild(tile_preview);
-
-
 	}
 
     public void get_previews()
@@ -90,7 +88,11 @@ public class Dice : RigidBody
                 {
                     current_roll_value = 0;
                 }
-                tile_preview.Texture = tile_preview_options[current_roll_value];
+
+				if (tile_preview_options[current_roll_value] != null)
+				{
+                	tile_preview.Texture = tile_preview_options[current_roll_value];
+				}
 			}
 
 			if (face.is_chosen && allow_new_value && is_velocity_zero())
