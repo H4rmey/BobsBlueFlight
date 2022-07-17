@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/City.png-a423ccc7b436e198f01b36a537f95600.stex"
+path="res://.import/19.png-1bf2d059a12ec34449edaa91ed2181dd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GUI elements/Prev/City.png"
-dest_files=[ "res://.import/City.png-a423ccc7b436e198f01b36a537f95600.stex" ]
+source_file="res://Assets/GUI_elements/Prev/19.png"
+dest_files=[ "res://.import/19.png-1bf2d059a12ec34449edaa91ed2181dd.stex" ]
 
 [params]
 

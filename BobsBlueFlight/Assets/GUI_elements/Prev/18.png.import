@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/crater.png-f357b8cec196c4196a04914b33cd24bc.stex"
+path="res://.import/18.png-81e9449ffbe42edcc2debd1fb1a26cf7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GUI elements/Prev/crater.png"
-dest_files=[ "res://.import/crater.png-f357b8cec196c4196a04914b33cd24bc.stex" ]
+source_file="res://Assets/GUI_elements/Prev/18.png"
+dest_files=[ "res://.import/18.png-81e9449ffbe42edcc2debd1fb1a26cf7.stex" ]
 
 [params]
 
