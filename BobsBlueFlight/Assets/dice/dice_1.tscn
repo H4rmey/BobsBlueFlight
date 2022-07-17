@@ -27,6 +27,7 @@ surfaces/0 = {
 transform = Transform( 1, 0, 0, 0, 1.00015, 0, 0, 0, 1.00037, 0, 0, 0 )
 script = ExtResource( 2 )
 nof_faces = 2
+force = 15.0
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 0, 0, 0 )

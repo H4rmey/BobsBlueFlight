@@ -12,6 +12,7 @@ points = PoolVector3Array( 0.00992472, -1.69873e-06, 0.00441707, 0.00963911, 0.0
 [node name="dice" type="RigidBody"]
 transform = Transform( 1, 0, 0, 0, 1.00015, 0, 0, 0, 1.00037, 0, 0, 0 )
 script = ExtResource( 2 )
+nof_faces = 20
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 100, 0, 0, 0, -3.57628e-05, 100, 0, -100, -3.57628e-05, 0.000904083, 2.38383e-07, 0.0143545 )
