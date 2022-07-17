@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ice_tile_ambience.wav-57b3e0ab34fdf72ad338593be6c6f5eb.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Ambience/ice_tile_ambience.wav"
+dest_files=[ "res://.import/ice_tile_ambience.wav-57b3e0ab34fdf72ad338593be6c6f5eb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/farm_tile_ambience.wav-09ddf95341d8824aac89b830e5b37e75.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Ambience/farm_tile_ambience.wav"
+dest_files=[ "res://.import/farm_tile_ambience.wav-09ddf95341d8824aac89b830e5b37e75.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

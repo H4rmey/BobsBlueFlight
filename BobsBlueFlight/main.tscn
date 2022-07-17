@@ -30,7 +30,7 @@ public class GameManager : Node
 [node name="Spatial" type="Spatial"]
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.850655, 0.525724, 0, -0.525724, 0.850655, 13.9561, 8.54786, 21.397 )
+transform = Transform( 1, 0, 0, 0, 0.850655, 0.525724, 0, -0.525724, 0.850655, 23.372, 8.02822, 29.6856 )
 fov = 90.0
 script = ExtResource( 2 )
 sensitivity = 0.5

@@ -12,6 +12,8 @@ public class HexGrid : Spatial
     public int grid_size_x = 15;
     [Export]
     public int grid_size_z = 10;
+    [Export]
+    public int wall_height = 1000;
 
     [Export]
     public float tile_scale = 0.035f;
@@ -42,6 +44,11 @@ public class HexGrid : Spatial
 
         get_placable_tiles();  
         create_grid();
+        create_wall(new Vector3(0, 0, grid_size_z * tile_size/2), new Vector3(1, wall_height, grid_size_z * tile_size));
+        create_wall(new Vector3(grid_size_x * tile_size/2, 0, 0), new Vector3(grid_size_x * tile_size, wall_height, 1));
+
+        create_wall(new Vector3(grid_size_x * tile_size * 1.333f, 0, grid_size_z * tile_size/2), new Vector3(1, wall_height, grid_size_z * tile_size));
+        create_wall(new Vector3(grid_size_z * tile_size / 2, 0, grid_size_x * tile_size * 1.333f), new Vector3(grid_size_z * tile_size, wall_height, 1));
 
         get_dice(level);
 
@@ -65,7 +72,7 @@ public class HexGrid : Spatial
 
     public void set_dice_to_center()
     {
-        Vector3 pos = new Vector3(grid_size_x/2, 10, grid_size_z/2);
+        Vector3 pos = new Vector3(grid_size_x*tile_size/2, 10, grid_size_z*tile_size/2);
         dice.Translate(pos);
     }
 
@@ -127,6 +134,18 @@ public class HexGrid : Spatial
                 placable_tiles[i-1] = hex_tile;
             }
         }
+    }
+
+    public void create_wall(Vector3 position, Vector3 scale)
+    {
+        PackedScene scene = ResourceLoader.Load("res://Assets/grid/wall.tscn") as PackedScene;
+
+        StaticBody wall = (StaticBody)scene.Instance();
+        wall.Translate(position);
+        wall.Scale = scale;
+
+        AddChild(wall);
+
     }
 
     public void create_grid()

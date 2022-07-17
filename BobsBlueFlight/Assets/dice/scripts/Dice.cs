@@ -54,15 +54,20 @@ public class Dice : RigidBody
     {
         Random rand = new Random();
 
-        float   x = Mathf.Clamp((float)rand.NextDouble(), -1, 1);
-        float   y = Mathf.Clamp((float)rand.NextDouble(), -1, 1);
-        float   z = Mathf.Clamp((float)rand.NextDouble(), -1, 1);
+        float   x = map((float)rand.NextDouble(), 0, 1, -1, 1);
+        float   y = map((float)rand.NextDouble(), 0, 1, -1, 1);
+        float   z = map((float)rand.NextDouble(), 0, 1, -1, 1);
         Vector3 force_position = new Vector3(x, y, z);
-                x = Mathf.Clamp((float)rand.NextDouble(), -force, force) * force;
-                y = Mathf.Clamp((float)rand.NextDouble(), 0, force) * force;
-                z = Mathf.Clamp((float)rand.NextDouble(), -force, force) * force;
+                x = map((float)rand.NextDouble(), 0, 1, -force, force);
+                y = map((float)rand.NextDouble(), 0, 1, 5, force);
+                z = map((float)rand.NextDouble(), 0, 1, -force, force);
         Vector3 force_impulse = new Vector3(x, y, z);
         ApplyImpulse(force_position, force_impulse);
+    }
+
+    public float map(float s, float a1, float a2, float b1, float b2)
+    {
+        return b1 + (s-a1)*(b2-b1)/(a2-a1);
     }
 
     public override void _UnhandledInput(InputEvent @event)

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/volcano_tile_ambience.wav-e8effc4dbde672cda31a5616f83053cf.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Ambience/volcano_tile_ambience.wav"
+dest_files=[ "res://.import/volcano_tile_ambience.wav-e8effc4dbde672cda31a5616f83053cf.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
