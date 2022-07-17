@@ -1,0 +1,18 @@
+[gd_scene format=2]
+
+[node name="GUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+input_pass_on_modal_close_click = false
+
+[node name="CurrentTile" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -200.0
+margin_top = 40.0
+margin_right = -40.0
+margin_bottom = -400.0
+expand = true
+stretch_mode = 5

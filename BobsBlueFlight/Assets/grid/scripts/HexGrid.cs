@@ -193,7 +193,11 @@ public class HexGrid : Spatial
             spatial.Scale = Vector3.One * tile_scale;
             spatial.Translate(new Vector3(0, hight_offset, 0));
             spatial.Rotate(new Vector3(0,1,0), Mathf.Pi * rotation_offset/180);
-
+            
+            if (mouse_hover_tile == null)
+            {
+                return;
+            }
             mouse_hover_tile.AddChild(tile);
         }
     }

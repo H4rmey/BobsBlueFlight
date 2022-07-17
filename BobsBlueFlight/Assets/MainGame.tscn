@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/grid/scripts/HexGrid.cs" type="Script" id=1]
+[ext_resource path="res://Assets/Audio/Music/final_main_loop.wav" type="AudioStream" id=2]
+[ext_resource path="res://camera.gd" type="Script" id=3]
+[ext_resource path="res://Assets/grid/HexGrid.tscn" type="PackedScene" id=4]
+
+[node name="MainGame" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.850655, 0.525724, 0, -0.525724, 0.850655, 23.372, 8.02822, 29.6856 )
+fov = 90.0
+script = ExtResource( 3 )
+sensitivity = 0.5
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Camera"]
+stream = ExtResource( 2 )
+max_db = -8.0
+autoplay = true
+
+[node name="HexGrid" type="Spatial" parent="." instance=ExtResource( 4 )]
+script = ExtResource( 1 )
+tile_size = 1.05
+grid_size_x = 40
+grid_size_z = 35
+tile_scale = 0.035
+level_max = 7

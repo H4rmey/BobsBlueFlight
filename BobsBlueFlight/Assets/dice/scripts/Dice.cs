@@ -2,7 +2,6 @@ using Godot;
 using Godot.Collections;
 using System;
 using System.Collections.Generic;
-using System.Linq; // Import the C# collection query api
 
 public class Dice : RigidBody
 {
@@ -25,13 +24,15 @@ public class Dice : RigidBody
 	private CustomSignals cs;
 	private Timer timer;
 	private Timer timer_stand_still;
+	private bool timer_is_running;
 
     public TextureRect tile_preview;
-    public List<TextureRect> tile_preview_options;
+    public List<Texture> tile_preview_options = new List<Texture>();
 
 	public override void _Ready()
 	{
 		get_faces();
+        get_previews();
 
 		cs = GetNode<CustomSignals>("/root/CustomSignals");
 
@@ -40,7 +41,22 @@ public class Dice : RigidBody
 		AddChild(timer);
 		timer.Start();
 		timer.WaitTime = waittime;
+
+        PackedScene scene = ResourceLoader.Load("res://Assets/GUI.tscn") as PackedScene;
+        tile_preview = (TextureRect)scene.Instance();
+        AddChild(tile_preview);
+
+
 	}
+
+    public void get_previews()
+    {
+        for (int i = 1; i <= nof_faces; i++)
+        {
+            Texture scene = ResourceLoader.Load("res://Assets/GUI_elements/Prev/" + i.ToString() + ".png") as Texture;
+            tile_preview_options.Add(scene);
+        }
+    }
 
 	public void get_faces()
 	{
@@ -56,6 +72,7 @@ public class Dice : RigidBody
 	{
 		base._Process(delta);
 
+        current_lowest_value = 999;
 		for (int i = 0; i < nof_faces; i++)
 		{
 			dice_face face = dice_faces[i];
@@ -64,6 +81,16 @@ public class Dice : RigidBody
 			{
 				current_lowest_value = pos_y; 
 				current_roll_value = i+1;
+
+                if (current_roll_value >= nof_faces)
+                {
+                    current_roll_value = nof_faces-1;
+                }
+                if (current_roll_value < 0)
+                {
+                    current_roll_value = 0;
+                }
+                tile_preview.Texture = tile_preview_options[current_roll_value];
 			}
 
 			if (face.is_chosen && allow_new_value && is_velocity_zero())
@@ -85,7 +112,7 @@ public class Dice : RigidBody
 	{
 		GD.Print("last_rolled_value = " + last_rolled_value);
 		cs.EmitSignal(nameof(CustomSignals.LevelUp), last_rolled_value);
-        apply_force(force, 1);
+        apply_force(1, 1);
 		timer.Stop();
 	}
 

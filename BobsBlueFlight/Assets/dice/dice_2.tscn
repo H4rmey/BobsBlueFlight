@@ -28,13 +28,15 @@ surfaces/0 = {
 
 [node name="dice" type="RigidBody"]
 transform = Transform( 1, 0, 0, 0, 1.00015, 0, 0, 0, 1.00037, 0, 0, 0 )
+collision_layer = 4
+collision_mask = 4
 script = ExtResource( 2 )
 nof_faces = 4
 
 [node name="nr_1" type="Area" parent="."]
 transform = Transform( 0.203571, -0.0266354, 0.0679985, 0.0172004, 0.02156, 0.3193, -0.138753, -0.0364054, 0.139345, 0.256193, -0.0752847, 0.333361 )
-collision_layer = 2
-collision_mask = 2
+collision_layer = 8
+collision_mask = 8
 script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="nr_1"]
@@ -42,8 +44,8 @@ shape = SubResource( 4 )
 
 [node name="nr_2" type="Area" parent="."]
 transform = Transform( 0.0216886, -0.0203909, 0.242174, 0.268512, 0.0122407, 0.00700282, -0.0646628, 0.0439902, 0.110307, 0.0735029, -0.111786, -0.634685 )
-collision_layer = 2
-collision_mask = 2
+collision_layer = 8
+collision_mask = 8
 script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="nr_2"]
@@ -51,8 +53,8 @@ shape = SubResource( 4 )
 
 [node name="nr_4" type="Area" parent="."]
 transform = Transform( 0.0170716, -0.0474981, -0.0848254, 0.00982742, -0.0152267, 0.26366, -0.276299, -0.00347634, 0.00413679, -0.818665, -0.212097, -0.171951 )
-collision_layer = 2
-collision_mask = 2
+collision_layer = 8
+collision_mask = 8
 script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="nr_4"]
@@ -60,8 +62,8 @@ shape = SubResource( 4 )
 
 [node name="nr_3" type="Area" parent="."]
 transform = Transform( -0.277, 0, 2.42162e-08, 0, 0.0500001, 0, -2.42161e-08, 0, -0.277001, -0.17642, 0.558644, -0.101593 )
-collision_layer = 2
-collision_mask = 2
+collision_layer = 8
+collision_mask = 8
 script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="nr_3"]
