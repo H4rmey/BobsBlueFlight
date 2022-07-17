@@ -4,3 +4,4 @@
 
 [node name="HexGrid" type="Spatial"]
 script = ExtResource( 1 )
+tile_scale = 0.036

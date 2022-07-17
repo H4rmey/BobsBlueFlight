@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Hexagon_Ice.glb-d4aeb3dac422c4883c117b5cda178674.scn"
+path="res://.import/Hexagon_Ice.glb-f62a1bbf17ebef80c57e9fcc43758995.scn"
 
 [deps]
 
-source_file="res://Assets/Hexagon/Hexagon_Ice.glb"
-dest_files=[ "res://.import/Hexagon_Ice.glb-d4aeb3dac422c4883c117b5cda178674.scn" ]
+source_file="res://Assets/grid/hexagons/Hexagon_Ice.glb"
+dest_files=[ "res://.import/Hexagon_Ice.glb-f62a1bbf17ebef80c57e9fcc43758995.scn" ]
 
 [params]
 

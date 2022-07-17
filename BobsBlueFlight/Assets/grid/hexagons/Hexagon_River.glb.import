@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/tile_2.glb-1a64eec5b1ffcf077f385ca9eaecd83c.scn"
+path="res://.import/Hexagon_River.glb-711b49a1025308d46a1fc5fbd5c371b4.scn"
 
 [deps]
 
-source_file="res://Assets/grid/hexagons/tile_2.glb"
-dest_files=[ "res://.import/tile_2.glb-1a64eec5b1ffcf077f385ca9eaecd83c.scn" ]
+source_file="res://Assets/grid/hexagons/Hexagon_River.glb"
+dest_files=[ "res://.import/Hexagon_River.glb-711b49a1025308d46a1fc5fbd5c371b4.scn" ]
 
 [params]
 
