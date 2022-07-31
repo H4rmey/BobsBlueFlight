@@ -34,6 +34,7 @@ public class HexGrid : Spatial
     [Export]
     public Dice dice;
 
+    [Export]
     public int level = 1;
     [Export]
     public int level_max = 6;

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://BasicUI.gd" type="Script" id=1]
 [ext_resource path="res://UI scenes/UI ELEMENTS/BG_1-01.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://UI scenes/UI ELEMENTS/1x/Asset 1.png" type="Texture" id=5]
 [ext_resource path="res://UI scenes/UI ELEMENTS/1x/Asset 2.png" type="Texture" id=6]
 [ext_resource path="res://UI scenes/UI ELEMENTS/1x/Asset 3.png" type="Texture" id=7]
+[ext_resource path="res://DrawLine3D.cs" type="Script" id=8]
 
 [node name="Basic UI" type="Control"]
 anchor_right = 1.0
@@ -68,6 +69,9 @@ margin_right = 507.0
 margin_bottom = 370.0
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 5 )
+
+[node name="Spatial" type="Node2D" parent="."]
+script = ExtResource( 8 )
 
 [connection signal="pressed" from="Container/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="Container/Options" to="." method="_on_Options_pressed"]

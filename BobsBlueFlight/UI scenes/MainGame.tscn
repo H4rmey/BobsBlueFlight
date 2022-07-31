@@ -23,4 +23,5 @@ grid_size_x = 40
 grid_size_z = 35
 tile_scale = 0.035
 nof_different_tiles = 20
-level_max = 7
+level = 3
+level_max = 3

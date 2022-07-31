@@ -29,6 +29,8 @@ public class Dice : RigidBody
     public TextureRect tile_preview;
     public List<Texture> tile_preview_options = new List<Texture>();
 
+	public DrawLine3D line3d = new DrawLine3D();
+
 	public override void _Ready()
 	{
 		get_faces();
@@ -45,6 +47,8 @@ public class Dice : RigidBody
         PackedScene scene = ResourceLoader.Load("res://Assets/GUI.tscn") as PackedScene;
         tile_preview = (TextureRect)scene.Instance();
         AddChild(tile_preview);
+
+		AddChild(line3d);
 	}
 
     public void get_previews()
@@ -69,6 +73,41 @@ public class Dice : RigidBody
 	public override void _Process(float delta)
 	{
 		base._Process(delta);
+
+		Vector3 axis = Vector3.Zero;
+		Vector3 ray = new Vector3(1,0,0);
+		float ray_length = 10;
+
+		int cnt = 1;
+        for (int i = 1; i <= nof_faces; i++)
+        {
+			if (cnt == 3)
+			{
+				axis = new Vector3(1, 0, 0);
+			}
+			else if (cnt == 2)
+			{
+				axis = new Vector3(0, 1, 0);
+			}
+			else if (cnt == 1)
+			{
+				axis = new Vector3(0, 0, 1);
+			}
+
+			ray.Rotated(axis, 90*Mathf.Pi/180);
+
+			Vector3 start = this.GlobalTransform.origin;
+
+			line3d.DrawRay(start, ray * ray_length, Color.ColorN("red"), 0.1f);
+			 
+			cnt++;
+			if (cnt > 3) {
+				cnt = 1;
+			}
+        }
+
+
+
 
         current_lowest_value = 999;
 		for (int i = 0; i < nof_faces; i++)
